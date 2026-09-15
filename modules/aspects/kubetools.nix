@@ -12,7 +12,6 @@
         stern
         kubelogin-oidc
         fzf
-        kubernetes-helm
       ];
 
       home.shellAliases = {
