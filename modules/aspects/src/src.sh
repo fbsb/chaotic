@@ -106,7 +106,7 @@ find() {
 
 reindex() {
     log "Reindexing repositories in ${SRC_BASE}..."
-    fd -t d -H '^\.git$' "${SRC_BASE}" --exec dirname {} \; > "${SRC_INDEX}"
+    fd -t d -u '^\.git$' "${SRC_BASE}" --exec dirname {} \; > "${SRC_INDEX}"
     log "Found $(cat "${SRC_INDEX}" | wc -l) repositories"
 }
 
