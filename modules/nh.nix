@@ -33,7 +33,7 @@ let
               done
             fi
 
-            exec nh "''${args[@]}" . "''${override_args[@]}"
+            exec nh "''${args[@]}" . -- "''${override_args[@]}"
           '';
         };
       };
