@@ -16,6 +16,7 @@
                 if isDarwin then
                   [
                     "global:super+shift+3=toggle_quick_terminal"
+                    "shift+insert=paste_from_selection"
                   ]
                 else
                   [
@@ -36,6 +37,7 @@
             ]
             ++ platformKeys;
           theme = "light:Monokai Pro Light,dark:Monokai Pro";
+          scrollback-limit = 104857600; # 100 MiB
           shell-integration-features = "cursor,no-sudo,title,ssh-env,ssh-terminfo,path";
           tab-inherit-working-directory = false;
           window-inherit-working-directory = false;
